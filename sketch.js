@@ -1,20 +1,22 @@
 function setup () {
   createCanvas(600, 600);
+  background("blue");
 
-  var houseX = 100;
-  var houseY = 300;
-  var houseWidth = 200;
-  var houseHeight = 200;
-  var roofHeight = 100;
+  fill("green");
+  rect(0, 400, 600, 200);
 
-  var drawHouse = function () {
-   rect(houseX, houseY, houseWidth, houseHeight); // Draw a structure
-   triangle(houseX - 10, houseY, houseWidth / 2 + houseX, houseY - roofHeight, houseX + houseWidth + 10, houseY); // Draw a roof
-  };
+  fill(255);
+  rect(200, 200, 200, 200);
 
-  drawHouse();
+  fill(0);
+  rect(320, 100, 40, 100);
 
-  houseX = houseX + 250; // Increase x by 250
+  fill(150);
+  triangle(180, 200, 300, 100, 420, 200);
 
-  drawHouse();
+  fill("red");
+  rect(275, 300, 50, 100);
+
+  fill("yellow");
+  ellipse(500, 100, 100, 100);
 }
