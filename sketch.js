@@ -3,17 +3,17 @@ var setup = function () {
   background(0);
   noStroke();
 
-  fill("yellow");
+  fill("yellow"); // tractor beam
   triangle(200, 600, 300, 275, 400, 600);
 
-  fill(150);
+  fill(150); // body
   ellipse(300, 275, 400, 100);
 
-  fill(255);
+  fill(255); // dome part on top
   arc(300, 250, 100, 100, PI, TWO_PI, CHORD);
   ellipse(300, 250, 100, 25);
 
-  fill("yellow");
+  fill("yellow"); // lights around rim
   ellipse(110, 275, 10, 10);
   ellipse(125, 287.5, 10, 10);
   ellipse(150, 297.5, 10, 10);
