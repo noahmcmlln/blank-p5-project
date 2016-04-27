@@ -1,20 +1,41 @@
-function setup () {
+function setup() {
   createCanvas(600, 600);
+  background("blue"); // sky
 
-  var houseX = 100;
-  var houseY = 300;
-  var houseWidth = 200;
-  var houseHeight = 200;
-  var roofHeight = 100;
+  fill("green");
+  rect(0, 400, 600, 200);
 
-  var drawHouse = function () {
-   rect(houseX, houseY, houseWidth, houseHeight); // Draw a structure
-   triangle(houseX - 10, houseY, houseWidth / 2 + houseX, houseY - roofHeight, houseX + houseWidth + 10, houseY); // Draw a roof
-  };
+  fill("yellow");
+  ellipse(500, 100, 100, 100);
 
-  drawHouse();
+  makeahouse();
+}
 
-  houseX = houseX + 250; // Increase x by 250
+function makeahouse() {
+  var houseColor = 255;
+  var chimColor = 0;
+  var roofColor = 150;
+  var houseX = 200;
+  var houseY = 200;
+  var houseSize = 200;
+  var chimX = 320;
+  var chimWidth = 40;
+  var roofOverhang = 20;
+  var houseMaxY = 100;
+  var doorHalfWidth = 25;
+  var doorHeight = 100;
+  var middle = 300;
 
-  drawHouse();
+
+  fill(houseColor); // house body
+  rect(houseX, houseY, houseSize, houseSize);
+
+  fill(chimColor); // chimney
+  rect(chimX, houseMaxY, chimWidth, houseMaxY);
+
+  fill(roofColor); // roof
+  triangle(houseX - roofOverhang, houseY, middle, houseMaxY, houseX * 2 + roofOverhang, houseY);
+
+  fill("red"); // door
+  rect(middle - doorHalfWidth, middle, doorHalfWidth * 2, doorHeight);
 }
